@@ -20,8 +20,8 @@ class PostSeeder extends Seeder
                 'message' => 'メッセージが入ります',
                 'like' => null,
                 'user_id' => 1,
-                'created_at'=>'2023/02/01 11:11:11'
-                
+                'secondary_category_id' => 1,
+                'created_at' => '2023/02/01 11:11:11',
             ]
         ]);
     }

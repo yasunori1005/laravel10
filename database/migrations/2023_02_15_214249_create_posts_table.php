@@ -13,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title',30);
+            $table->string('title', 30);
             $table->integer('price');
-            $table->string('message',255);
+            $table->string('message', 255);
             $table->integer('like')->nullable();
             $table->foreignId('user_id')->constrained();
+            // $table->unsignedBigInteger('secondary_category_id');
+            $table->foreignId('secondary_category_id')->constrained();
             $table->timestamps();
         });
     }

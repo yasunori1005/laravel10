@@ -36,6 +36,17 @@
                                         </div>
                                         <div class="p-2 w-full">
                                             <div class="relative">
+                                                <label for="category" class="leading-7 text-sm text-gray-600">カテゴリー</label>
+                                                <select name="category" id="category">
+                                                    @foreach ($categories as $category)
+                                                        <optgroup label="{{$category}}"></optgroup>
+                                                    @endforeach
+                                                </select>
+                                                {{-- <x-input-error :messages="$errors->get('price')" class="mt-2" /> --}}
+                                            </div>
+                                        </div>
+                                        <div class="p-2 w-full">
+                                            <div class="relative">
                                                 <label for="message"
                                                     class="leading-7 text-sm text-gray-600">メッセージ</label>
                                                 <textarea id="message" name="message"
